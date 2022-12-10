@@ -1,0 +1,108 @@
+.content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+tr {
+    width: 499px;
+}
+
+td {
+    width: 133px;
+    height: 133px;
+    position: relative;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgb(0 0 0 / 5%);
+}
+
+table td {
+    border: 5px solid black;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    position: relative;
+}
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.shape {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    top: 30px;
+    right: 30px;
+}
+
+.d-none {
+    display: none;
+}
+
+.winner-content {
+    display: flex;
+    gap: 50px;
+}
+
+.winner-content span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.winner-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.winner {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.player-inactive {
+    opacity: 0.5;
+}
+
+.horizontal-line {
+    height: 5px;
+    background-color: rgb(0 0 0 / 20%);
+    width: 350px;
+    position: absolute;
+    transform: scaleX(0.0);
+    transform: scaleY(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.vertical{
+    transform: rotate(90deg) scaleX(0.0) ; 
+}
+
+.line-relative{
+    position: relative;
+}
