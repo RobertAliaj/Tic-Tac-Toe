@@ -96,6 +96,30 @@ function checkWinner() {
 
     if (winner) {   // wenn winner existiert 
         gameOver = true;
+
+        setTimeout(function () {
+            document.getElementById('gameOver').classList.remove('d-none');
+            document.getElementById('restart').classList.remove('d-none');
+            document.getElementById('content').style.display = 'none';
+        }, 1000)
     }
 }
 
+
+function restart() {
+    gameOver = false;
+    fields = [];
+    document.getElementById('gameOver').classList.add('d-none');
+    document.getElementById('restart').classList.add('d-none');
+
+    for (let i = 1; i < 8; i++) {
+        document.getElementById('line' + i).classList.add('d-none');
+    }
+
+    for (let i = 0; i < 8; i++) {
+        document.getElementById('cross-' + i).classList.add('d-none');
+        document.getElementById('circle-' + i).classList.add('d-none');
+    }
+    location.reload();
+
+}

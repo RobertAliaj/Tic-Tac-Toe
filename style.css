@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .content {
     display: flex;
     height: 100vh;
@@ -97,12 +101,67 @@ table tr td:last-child {
     transform: scaleX(0.0);
     transform: scaleY(0.0);
     transition: transform 225ms ease-in-out;
+    z-index: 1;
 }
 
-.vertical{
-    transform: rotate(90deg) scaleX(0.0) ; 
+.vertical {
+    transform: rotate(90deg) scaleX(0.0);
 }
 
-.line-relative{
+.line-relative {
     position: relative;
+}
+
+.game-over {
+    width: 100%;
+    object-fit: cover;
+    height: 414px;
+    top: 22%;
+    position: absolute;
+    animation: zoomIn 225ms ease-in-out;
+    z-index: 2;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgb(254, 163, 162);
+    width: 250px;
+    height: 100px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    animation: zoomInButton 225 ease-in-out;
+    position: absolute;
+    bottom: 2%;
+    left: 40%;
+    z-index: 2;
+}
+
+@keyframes zoomInButton {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restart:hover {
+    background-color: rgb(255, 151, 150);
 }
