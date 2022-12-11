@@ -1,5 +1,11 @@
 body {
     margin: 0;
+    background-image: url(img/pexels-francesco-ungaro-998641.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-color: black;
 }
 
 .content {
@@ -27,7 +33,7 @@ td:hover {
 }
 
 table td {
-    border: 5px solid black;
+    border: 5px solid white;
     position: relative;
 }
 
@@ -62,12 +68,13 @@ table tr td:last-child {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .winner-content {
     display: flex;
     gap: 50px;
+    color: white;
 }
 
 .winner-content span {
@@ -87,6 +94,7 @@ table tr td:last-child {
     width: 80px;
     height: 80px;
     object-fit: contain;
+
 }
 
 .player-inactive {
@@ -94,8 +102,8 @@ table tr td:last-child {
 }
 
 .horizontal-line {
-    height: 5px;
-    background-color: rgb(0 0 0 / 20%);
+    height: 10px;
+    background-color: white;
     width: 350px;
     position: absolute;
     transform: scaleX(0.0);
@@ -136,11 +144,11 @@ table tr td:last-child {
 
 .restart {
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgb(254, 163, 162);
+    background-color: white;
     width: 250px;
     height: 100px;
     font-size: 25px;
-    color: white;
+    color: black;
     font-weight: bold;
     cursor: pointer;
     animation: zoomInButton 225 ease-in-out;
@@ -148,6 +156,7 @@ table tr td:last-child {
     bottom: 2%;
     left: 40%;
     z-index: 2;
+    border-radius: 5px;
 }
 
 @keyframes zoomInButton {
@@ -163,5 +172,105 @@ table tr td:last-child {
 }
 
 .restart:hover {
-    background-color: rgb(255, 151, 150);
+    background-color: rgb(224, 224, 224);
+}
+
+.show-result {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0 0 0 / 70%);
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    position: absolute;
+    top: 330px;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+@media(max-width: 800px) {
+    .show-result {
+        font-size: 40px;
+    }
+
+    .restart {
+        left: 35%;
+    }
+}
+
+@media(max-width: 600px) {
+    .restart {
+        left: 30%;
+    }
+}
+
+@media(max-width: 500px) {
+    .restart {
+        left: 25%;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .content {
+        gap: 25px;
+    }
+
+    .winner-content span{
+        font-size: 16px;
+    }
+
+    .winner {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .restart {
+        left: 15%;
+        bottom: 35%;
+        height: 60px;
+    }
+
+    .show-result {
+        font-size: 27px;
+    }
+
+    .vertical {
+        right: 21px !important;
+    }
+
+    .vertical-right {
+        right: -106px !important;
+    }
+
+    .vertical-left {
+        left: -124px !important;
+    }
+
+    .across-right {
+        top: 200px !important;
+        left: 10px !important;
+        transform: rotate(-49deg) scaleX(1) !important;
+    }
+
+    .across-left {
+        top: 206px !important;
+        right: 7px !important;
+        transform: rotate(48deg) scaleX(1) !important;
+    }
+
+    .horizontal-line-res {
+        right: 13px !important;
+    }
+
+    .show-result {
+        top: 200px;
+    }
 }

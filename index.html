@@ -11,18 +11,18 @@
 </head>
 
 <body>
-    <img src="img/gameover.jpg" class="game-over  d-none" id="gameOver">
+    <div id="showResult" class="show-result d-none">Unentschieden</div>
     <button class="restart d-none" id="restart" onclick="restart()">Restart</button>
 
     <div class="content" id="content">
         <div class="winner-content" id="playerPanel">
             <div class="winner-child " id="player1">
                 <img src="img/circle.png" class="winner">
-                <span> Player 1</span>
+                <span> Kreis</span>
             </div>
             <div class="winner-child player-inactive" id="player2">
                 <img src="img/cross.png" class="winner">
-                <span> Player 21</span>
+                <span>Kreuz</span>
             </div>
         </div>
 
@@ -33,15 +33,13 @@
             <div id="line3" class="horizontal-line" style="top: 347px; right: 36px;"></div>
 
             <!-- Vertical -->
-            <div id="line4" class="horizontal-line vertical" style="top: 212px; left: -110px;"></div>
+            <div id="line4" class="horizontal-line vertical vertical-left" style="top: 212px; left: -110px;"></div>
             <div id="line5" class="horizontal-line vertical" style="top: 212px; right: 35px;"></div>
-            <div id="line6" class="horizontal-line vertical" style="top: 212px; right: -104px;"></div>
+            <div id="line6" class="horizontal-line vertical vertical-right" style="top: 212px; right: -104px;"></div>
 
             <!-- Across -->
-            <div id="line7" class="horizontal-line"
-                style="top: 200px; right: 40px; transform: rotate(45deg)  scaleX(0.0);"></div>
-            <div id="line8" class="horizontal-line"
-                style="top: 203px; left: 36px; transform: rotate(-45deg) scaleX(0.0) ;"></div>
+            <div id="line7" class="horizontal-line" style="top: 200px; right: 40px; transform: rotate(45deg)  scaleX(0.0);"></div>
+            <div id="line8" class="horizontal-line" style="top: 203px; left: 36px; transform: rotate(-45deg) scaleX(0.0) ;"></div>
 
             <table>
 
