@@ -6,6 +6,16 @@ body {
     background-size: cover;
     height: 100vh;
     background-color: black;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+body a{
+    color: lightslategrey;
+    text-decoration: none;
 }
 
 .content {
@@ -217,6 +227,10 @@ table tr td:last-child {
 }
 
 @media(max-width: 400px) {
+
+    body a{
+        display: none;
+    }
 
     .content {
         gap: 25px;

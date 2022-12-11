@@ -8,7 +8,6 @@ let winner;
 *  Und so weiss er das Array dann auch das da 9 Elemente drin sind.
 */
 
-
 function fillShape(id) {                                                             // id hat im wechsel immer den Wert von 0 bis 8 (so hat fileds[id] am ende eine länge von 8)
     checkFieldShapes(id);
     draw();
@@ -50,19 +49,19 @@ function draw() {
 
 function showHorizontalMatches() {
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {  // wenn 0 = 1 und 1 = 2 UND fields[0] existiert(true)
-               document.getElementById('line1').classList.add('horizontal-line-res'); //responsive
+        document.getElementById('line1').classList.add('horizontal-line-res'); //responsive
         document.getElementById('line1').style.transform = 'scaleX(1)';
         winner = fields[0];                                                // dann winner, falls fields[0] undefined/false wäre, wird der code nicht ausgeführt
     }
 
     if (fields[3] == fields[4] && fields[4] == fields[5] && fields[3]) {
-                document.getElementById('line2').classList.add('horizontal-line-res'); //responsive
+        document.getElementById('line2').classList.add('horizontal-line-res'); //responsive
         document.getElementById('line2').style.transform = 'scaleX(1)';
         winner = fields[3];
     }
 
     if (fields[6] == fields[7] && fields[7] == fields[8] && fields[6]) {
-               document.getElementById('line3').classList.add('horizontal-line-res'); //responsive
+        document.getElementById('line3').classList.add('horizontal-line-res'); //responsive
         document.getElementById('line3').style.transform = 'scaleX(1)';
         winner = fields[6];
     }
@@ -108,6 +107,7 @@ function undecided() {
             document.getElementById('content').style.display = 'none';
             document.getElementById('restart').classList.remove('d-none');
             document.getElementById('showResult').classList.remove('d-none');
+            document.getElementById('credits').classList.add('d-none');
         }, 1000)
     }
 }
@@ -120,6 +120,7 @@ function crossIsWinner() {
             document.getElementById('restart').classList.remove('d-none');
             document.getElementById('showResult').innerHTML = `Kreuz hat gewonnen`;
             document.getElementById('showResult').classList.remove('d-none');
+            document.getElementById('credits').classList.add('d-none');
         }, 1000)
     }
 }
@@ -132,6 +133,7 @@ function circleIsWinner() {
             document.getElementById('content').style.display = 'none';
             document.getElementById('showResult').innerHTML = `Kreis hat Gewonnen`;
             document.getElementById('showResult').classList.remove('d-none');
+            document.getElementById('credits').classList.add('d-none');
         }, 1000)
 
     }
